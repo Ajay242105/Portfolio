@@ -21,9 +21,9 @@ font-size:80px;
     position: absolute;
     bottom: 0;
     top: 0;
-    right: 0;
+    /* right: 0; */
     width:200px;
-    padding-left: 220px;
+    padding-left: 200px;
     opacity: 0.8;
     z-index: -1;
 
@@ -87,6 +87,17 @@ font-weight: 500px;
     margin-left: 10px; 
     margin-right: auto;
  }
+ .about-skill p{
+    min-width: 150px;
+/* font-size: 20px; */
+font-weight: 500px;
+
+
+}
+.about-skill:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
+}
  .about-achievements{
     margin-bottom: 30px;
     margin-left:60%;
@@ -115,6 +126,17 @@ font-weight: 500px;
 
 
  }
+ .about-achievement:hover{
+transform: scale(1.05);
+transition: 0.3s;
+}
+ .about-achievement p{
+font-size: 22px;
+font-weight: 600px;
+ }
+
+
+
 
 
 
