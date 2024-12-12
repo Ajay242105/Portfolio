@@ -1,54 +1,77 @@
-.services {
+.Projects {
     display: flex;
     flex-direction: column;
     text-align: center;
-    justify-items: center;
-    gap: 80px;
+    align-items: center;
     margin: 80px 170px;
+
 }
 
-.service-title {
+.project-title {
+
     position: relative;
-    font-size: 40px;
+
+}
+
+.project-title h1 {
+    font-size: 80px;
     text-align: center;
     padding: 0 30px;
+    font-weight: 600;
 }
 
-.service-title img {
+
+
+.project-title img {
     position: absolute;
     width: 200px;
     top: 0;
     bottom: 0;
     opacity: 0.8;
     z-index: -1;
+
 }
 
-.service-format {
+.project-format {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 20px;
     border-radius: 10px;
     border: 2px solid white;
     transition: 0.4s;
     cursor: pointer;
-    padding: 20px; 
+    padding: 20px;
 }
 
-.service-container {
+.project-container {
     display: grid;
-    grid-template-columns: repeat(3,1fr); 
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
-    margin-bottom: 80px;
+    margin: 80px 0;
 }
 
-.service-format h3 {
+.project-format img {
+    align-content: center;
+    box-sizing: border-box;
+    width: 200px;
+    height: 200px;
+    transition: 0.3s;
+    cursor: pointer;
+    background: white;
+
+
+}
+
+.project-format h3 {
     font-size: 28px;
     font-weight: 600;
 }
 
-.service-format h2 {
-    font-size: 24px; /* Adjusted size for better visibility */
+.project-format h2 {
+    font-size: 24px;
+    /* Adjusted size for better visibility */
     font-weight: 800;
     background: linear-gradient(267deg, orange 0%, rgb(220, 84, 208) 100%);
     background-clip: text;
@@ -57,22 +80,31 @@
 }
 
 .service-format p {
-    color: white; 
-    font-size: 16px; 
-    line-height: 1.5; 
+    color: white;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
-.service-readmore {
+.project-readmore {
     display: flex;
     gap: 20px;
     align-items: center;
     margin-top: 20px;
-    color: white; 
-    cursor: pointer; 
+    color: white;
+    cursor: pointer;
 }
-.service-format:hover{
+
+.project-format:hover {
     border: 2px solid rgb(237, 178, 220);
-    background-image: linear-gradient(45deg,rgb(57, 35, 52),rgb(112, 85, 246));
+    background-image: linear-gradient(45deg, rgb(57, 35, 52), rgb(112, 85, 246));
     transform: scale(1.04);
     transition: 0.4s;
+}
+
+.project-format img:hover {
+    transform: scale(1.06);
+    background: rgb(181, 181, 224);
+    transition: 0.3s;
+    cursor: pointer;
+
 }
