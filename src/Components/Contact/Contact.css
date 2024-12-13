@@ -1,4 +1,4 @@
-.contact{
+.contact {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,32 +6,130 @@
     gap: 80px;
     margin: 80px 170px;
 }
-.contact-title{
+
+.contact-title {
     position: relative;
 }
 
-.contact-title h1{
+.contact-title h1 {
     padding: 0px 30px;
-    font-size:80px;
-    font-weight: 600px;
+    font-size: 80px;
+    font-weight: 600;
 }
-.contact-title img{
-        position: absolute;
-        width: 200px;
-        top: 0;
-        bottom: 0;
-        opacity: 0.8;
-        z-index: -1;
+
+.contact-title img {
+    position: absolute;
+    width: 200px;
+    top: 0;
+    bottom: 0;
+    opacity: 0.8;
+    z-index: -1;
+    padding-left: 250px;
+}
+
+.contact-section {
+    display: flex;
+    gap: 150px;
+
+}
+
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    gap: 30PX;
+
+}
+
+.contact-left h1 {
+    font-size: 80px;
+    font-weight: 700px;
+    background: linear-gradient(267deg, orange 0%, rgb(220, 84, 208) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.contact-left p {
+    max-width: 550px;
+    font-size: 20px;
+    color: #D8D8D8;
+    text-align: justify;
+    line-height: 35px;
+
+
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: #D8D8D8;
+    font-size: 22px;
+
+}
+
+.contact-detail {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    /* margin-bottom: 50px; */
+
+}
+
+.contact-right {
+    display: flex;
+    flex-direction: column;
+    gap: 30PX;
+    align-items: start;
+    margin-top: 35px;
+}
+
+.contact-right input {
+    border: none;
+    background: rgb(43, 42, 42);
+    width: 500px;
+    height: 68px;
+    padding-left: 20px;
+    border-radius: 4px;
+    color: rgb(113, 89, 89);
+    font-size: 20px;
+    font-family: outfit;
+
+}
+
+.contact-right textarea {
+    border: none;
+    background: rgb(43, 42, 42);
+    width: 520px;
+    height: 200px;
+    font-size: 20px;
+    font-family: outfit;
+    color: rgb(113, 89, 89);
+    border-radius: 4px;
+}
+
+.contact-submit {
+    border: none;
+    color: white;
+    border-radius: 50px;
+    background: linear-gradient(267deg, orange 0%, rgb(220, 84, 208) 100%);
+    font-size: 22px;
+    padding: 20px 60px;
+    margin-bottom: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+
+
+}
+.contact-submit:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
     
-    }
-    .contact-secton{
-        display: flex;
-        gap: 150px;
-        
-    }
-    .contact-left{
-        
-    }
+}
 
-
-
+.contact-right input:focus,
+.contact-right textarea:focus {
+    border: 2px solid #f8f7f7; /* Focus border color */
+    outline: none;
+}
