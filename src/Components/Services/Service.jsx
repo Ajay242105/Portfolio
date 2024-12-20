@@ -23,7 +23,7 @@ const Services_data = [
 
 const Service = () => {
   return (
-    <div className='services'>
+    <div id='service' className='services'>
       <div className="service-title">
         <h1>My Services</h1>
         <img src={bg_img} alt="Background for services section" />

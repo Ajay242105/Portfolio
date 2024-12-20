@@ -1,15 +1,41 @@
 import React from 'react'
 import './Contact.css'
 import bg_img from '../../assets/bg_img.png'
-import { FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa'; // Importing icons
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaBars, FaTimes } from 'react-icons/fa'; 
 
 
 
 
 
 const Contact = () => {
+    const [result, setResult] = React.useState("");
+
+    const onSubmit = async (event) => {
+        event.preventDefault();
+        setResult("Sending....");
+        const formData = new FormData(event.target);
+    
+        formData.append("access_key", "e5b314e3-f069-4fc8-9bba-bd54de117f36");
+    
+        const response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          body: formData
+        });
+    
+        const data = await response.json();
+    
+        if (data.success) {
+          setResult("Form Submitted Successfully");
+          alert("Form Submitted Successfully!"); 
+          event.target.reset();
+        } else {
+          console.log("Error", data);
+          setResult(data.message);
+          alert("Error: " + data.message);
+        }
+      };
     return (
-        <div className='contact'>
+        <div id='contact' className='contact'>
             <div className="contact-title">
                     <h1>Get in touch</h1>
                     <img src={bg_img} alt="Background for services section" />
@@ -45,7 +71,7 @@ const Contact = () => {
                     </div>
 
                 </div>
-                <form className="contact-right">
+                <form onSubmit={onSubmit} className="contact-right">
 
                     <label htmlFor="">Your Name</label>
                     <input type="text" placeholder='Enter your name' required />

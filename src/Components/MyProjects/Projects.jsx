@@ -27,7 +27,7 @@ const project_data = [
 const Projects = () => {
   return (
     
-    <div className='Projects'>
+    <div id='project' className='Projects'>
       <div className="project-title">
         <h1>My latest Projects</h1>
         <img src={bg_img} alt="" />

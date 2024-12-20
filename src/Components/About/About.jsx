@@ -5,7 +5,7 @@ import bg_img from '../../assets/bg_img.png'
 
 const About = () => {
     return (
-        <div className='about'>
+        <div id='about' className='about'>
             <div className="about-title">
                 <h1>About me</h1>
                 <img src={bg_img} alt="About_img" />

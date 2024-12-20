@@ -4,13 +4,10 @@
     text-align: center;
     align-items: center;
     margin: 80px 170px;
-
 }
 
 .project-title {
-
     position: relative;
-
 }
 
 .project-title h1 {
@@ -20,8 +17,6 @@
     font-weight: 600;
 }
 
-
-
 .project-title img {
     position: absolute;
     width: 200px;
@@ -29,8 +24,14 @@
     bottom: 0;
     opacity: 0.8;
     z-index: -1;
-    padding-left:95px ;
+    padding-left: 95px;
+}
 
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin: 80px 0;
 }
 
 .project-format {
@@ -46,13 +47,6 @@
     padding: 20px;
 }
 
-.project-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    margin: 80px 0;
-}
-
 .project-format img {
     align-content: center;
     box-sizing: border-box;
@@ -61,8 +55,6 @@
     transition: 0.3s;
     cursor: pointer;
     background: white;
-
-
 }
 
 .project-format h3 {
@@ -72,7 +64,6 @@
 
 .project-format h2 {
     font-size: 24px;
-    /* Adjusted size for better visibility */
     font-weight: 800;
     background: linear-gradient(267deg, orange 0%, rgb(220, 84, 208) 100%);
     background-clip: text;
@@ -80,7 +71,7 @@
     -webkit-text-fill-color: transparent;
 }
 
-.service-format p {
+.project-format p {
     color: white;
     font-size: 16px;
     line-height: 1.5;
@@ -107,5 +98,73 @@
     background: rgb(181, 181, 224);
     transition: 0.3s;
     cursor: pointer;
+}
 
+@media (max-width: 768px) {
+    .project-title h1 {
+        font-size: 40px;
+    }
+
+    .project-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .project-format img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .project-format {
+        padding: 15px;
+    }
+
+    .project-format h3 {
+        font-size: 24px;
+    }
+
+    .project-format h2 {
+        font-size: 20px;
+    }
+
+    .project-format p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-title h1 {
+        font-size: 32px;
+    }
+
+    .project-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .project-format img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .project-format {
+        padding: 10px;
+    }
+
+    .project-format h3 {
+        font-size: 20px;
+    }
+
+    .project-format h2 {
+        font-size: 18px;
+    }
+
+    .project-format p {
+        font-size: 12px;
+    }
+
+    .project-title img {
+        width: 150px;
+        padding-left: 60px;
+    }
 }

@@ -37,7 +37,7 @@
 
 .service-container {
     display: grid;
-    grid-template-columns: repeat(3,1fr); 
+    grid-template-columns: repeat(3, 1fr); 
     gap: 40px;
     margin-bottom: 80px;
 }
@@ -48,7 +48,7 @@
 }
 
 .service-format h2 {
-    font-size: 24px; /* Adjusted size for better visibility */
+    font-size: 24px;
     font-weight: 800;
     background: linear-gradient(267deg, orange 0%, rgb(220, 84, 208) 100%);
     background-clip: text;
@@ -70,9 +70,68 @@
     color: white; 
     cursor: pointer; 
 }
-.service-format:hover{
+
+.service-format:hover {
     border: 2px solid rgb(237, 178, 220);
-    background-image: linear-gradient(45deg,rgb(57, 35, 52),rgb(112, 85, 246));
+    background-image: linear-gradient(45deg, rgb(57, 35, 52), rgb(112, 85, 246));
     transform: scale(1.04);
     transition: 0.4s;
+}
+
+@media (max-width: 768px) {
+    .service-title h1 {
+        font-size: 32px;
+    }
+
+    .service-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .service-format {
+        padding: 15px;
+    }
+
+    .service-format h3 {
+        font-size: 24px;
+    }
+
+    .service-format h2 {
+        font-size: 20px;
+    }
+
+    .service-readmore p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-title {
+        font-size: 28px;
+    }
+
+    .service-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .service-format {
+        padding: 10px;
+    }
+
+    .service-format h3 {
+        font-size: 20px;
+    }
+
+    .service-format h2 {
+        font-size: 18px;
+    }
+
+    .service-readmore p {
+        font-size: 12px;
+    }
+
+    .service-title img {
+        width: 150px;
+    }
 }
